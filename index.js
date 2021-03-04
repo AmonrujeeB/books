@@ -4,10 +4,10 @@ const app = express()
 app.use(express.json())
 let books = []
 
-app.get('/books', (req, res) => {
-
+app.get('/books/:id', async(req, res) => {
     res.status(200).json(books)
 })
+
 
 
 app.post('/books', (req, res) => {
